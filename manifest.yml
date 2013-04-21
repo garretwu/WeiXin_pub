@@ -1,0 +1,18 @@
+---
+applications:
+- name: wangGallery
+  framework: node
+  runtime: node08
+  memory: 1G
+  instances: 1
+  url: wangGallery.${target-base}
+  path: .
+  services:
+    mongodb-wanggallery:
+      vendor: mongodb
+      version: '2.0'
+      tier: free
+    rabbitmq-wanggallery:
+      vendor: rabbitmq
+      version: '2.4'
+      tier: free
